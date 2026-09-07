@@ -1,0 +1,17 @@
+rensic-app/
+rensic-foundry/
+rensic-ingestion/
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+.env
+.env.*
+Untitled/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+dist/
+*.tsbuildinfo
