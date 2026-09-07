@@ -8,9 +8,11 @@ This folder is the tidy project home for docs + the three Foundry stemma checkou
 
 ## Layout
 
+Agents (Cursor / Grok): read `AGENTS.md` before editing.
+
 ```
 rensic/
-  README.md  CONTRIBUTING.md  docs/
+  README.md  AGENTS.md  docs/
   rensic-app/  rensic-foundry/  rensic-ingestion/
 ```
 
