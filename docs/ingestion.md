@@ -132,7 +132,7 @@ Magritte source "Alchemy RPC API" supplies **egress** (the cluster may call Alch
 
 ## Cross-chain
 
-`config.py` already describes Base, Arbitrum, Optimism, Polygon, zkSync. Ontology Address ids are `chain:hex`. The live Magritte host for this project is ETH-mainnet. Cross-chain is a sequel: egress + keys + a case that selects those chain ids. Do not demo it until ETH hop-1 is sharp.
+`config.py` describes ethereum, base, arbitrum, polygon, optimism, bsc, robinhood, avalanche. Ontology Address ids are `chain:hex`. The live Magritte host for this project is ETH-mainnet. Cross-chain is a sequel: egress + keys + a case that selects those chain ids. Do not demo it until ETH hop-1 is sharp.
 
 ## What you rebuild after which change
 

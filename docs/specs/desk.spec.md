@@ -25,7 +25,7 @@ Quiet wallets often need 365.
 
 Shared module: `rensic-app/src/chains.ts` (single source for Home pickers + CaseView explorers).
 
-Desk list matches ingest `CHAINS`: ethereum, base, arbitrum, optimism, polygon, zksync, scroll, linea, blast.
+Desk list matches ingest `CHAINS`: ethereum, base, arbitrum, polygon, optimism, bsc, robinhood, avalanche.
 
 UI note: chains only work if Alchemy key/network is configured in Foundry Chain Configuration for that network.
 

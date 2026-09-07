@@ -7,7 +7,7 @@ Repo: rensic-ingestion. Production runs on Foundry Spark builds.
 - Desk choices: 7, 30, 90, 365 days. Default 30.
 - Clamp lookback to [1, 365].
 - fromBlock = latest - lookback_days * blocks_per_day
-- ETH blocks_per_day=7200; L2s=43200.
+- ETH blocks_per_day=7200; typical L2s=43200; BSC/Avalanche=28800; Robinhood=864000.
 
 ## Orchestrator
 
@@ -24,8 +24,10 @@ Repo: rensic-ingestion. Production runs on Foundry Spark builds.
 
 ## Chains
 
-`config.CHAINS` registry: ethereum, base, arbitrum, optimism, polygon, zksync, scroll, linea, blast.
+`config.CHAINS` registry: ethereum, base, arbitrum, polygon, optimism, bsc, robinhood, avalanche.
 
-Alchemy subdomains: eth-mainnet, base-mainnet, arb-mainnet, opt-mainnet, polygon-mainnet, zksync-mainnet, scroll-mainnet, linea-mainnet, blast-mainnet.
+Alchemy subdomains: eth-mainnet, base-mainnet, arb-mainnet, polygon-mainnet, opt-mainnet, bnb-mainnet, robinhood-mainnet, avax-mainnet.
+
+blocks_per_day: ethereum 7200; base/arbitrum/polygon/optimism 43200; bsc/avalanche 28800; robinhood 864000 (~0.1s blocks).
 
 Desk `chains.ts` must stay aligned. Pipeline only succeeds for networks with a configured Alchemy key in Chain Configuration.
