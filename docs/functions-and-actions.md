@@ -39,6 +39,7 @@ Class `RensicOntologyEdits` (`ontology-edits.ts`):
 | `expandInvestigation` | `expand-investigation` | New membership role `expanded`; case status `active` |
 | `closeInvestigation` | `close-investigation` | status `closed` |
 | `archiveInvestigation` | `archive-investigation` | status `archived` |
+| `deleteInvestigation` | `delete-investigation` | Cascade: CaseAddress + Narrative for case, then Case. Keeps Address / pack / ingest datasets. |
 | `saveInvestigationNarrative` | `save-investigation-narrative` | Investigation Narrative row + copies body to `caseSummary` |
 
 These are the kinetic core. They do **not** call Alchemy. They do **not** set `riskScore`.
@@ -82,13 +83,13 @@ Keep the files. Do not pin `generate-narrative` to this `analyzeRisk` until [aip
 
 From Ontology Manager on Investigation Case:
 
-- create / expand / close / archive
+- create / expand / close / archive / delete
 - `update-case-status`
 - `flag-for-review` (case escalation -- not the address Flag button)
 - `generate-narrative` (future AIP)
 - `save-investigation-narrative`
 
-Desk today: create + RPC config + address Flag (`label-address`) + Vertex link. Status/close/archive from the UI can wait.
+Desk today: create + RPC config + address Flag (`label-address`) + Vertex link + delete investigation. Close/archive remain available as status-only paths.
 
 ## Function vs pipeline vs action (worked examples)
 

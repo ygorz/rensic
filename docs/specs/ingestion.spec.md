@@ -21,3 +21,11 @@ Repo: rensic-ingestion. Production runs on Foundry Spark builds.
 - snapshot_known_entities writes clean/known_entities.
 - clean_to_ontology left-joins names onto Address.
 - chain and address lowercased/stripped on snapshot.
+
+## Chains
+
+`config.CHAINS` registry: ethereum, base, arbitrum, optimism, polygon, zksync, scroll, linea, blast.
+
+Alchemy subdomains: eth-mainnet, base-mainnet, arb-mainnet, opt-mainnet, polygon-mainnet, zksync-mainnet, scroll-mainnet, linea-mainnet, blast-mainnet.
+
+Desk `chains.ts` must stay aligned. Pipeline only succeeds for networks with a configured Alchemy key in Chain Configuration.

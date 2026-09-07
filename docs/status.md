@@ -15,6 +15,8 @@ Honest snapshot as of 2026-09-06. Unfinished is fine. Filling leftover scores is
 | Flag | `label-address` | Official rename blocked; community display can yield |
 | RPC key | `configure-chain-rpc` | Then rebuild ingest |
 | Vertex button | URL with Address RID + cast 16 | Graph lives in Foundry |
+| Delete investigation | Desk -> `delete-investigation` | Cascades case memberships + narratives; keeps Address/pack/ingest |
+| Multi-chain picker | `chains.ts` aligned with ingest CHAINS | Needs Alchemy network configured per chain |
 | AI tab JSON | CaseView `brief` | Not a model |
 | Page-cap banner | `transactionCount` >= 200000 | Vitalik stress test |
 

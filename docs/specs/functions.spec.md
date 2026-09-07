@@ -9,6 +9,8 @@ Ship: push stemma, publish version, pin actions.
   Empty title/seed/chains: no-op (no throw).
 - expandInvestigation: membership role expanded.
 - closeInvestigation / archiveInvestigation: status only.
+- deleteInvestigation: cascade-delete CaseAddress + InvestigationNarrative for caseId, then InvestigationCase.
+  Keeps global Address + known_entities + ingest datasets.
 - saveInvestigationNarrative: Narrative + caseSummary copy.
 
 ## labelAddress
