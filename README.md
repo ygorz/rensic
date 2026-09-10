@@ -15,11 +15,11 @@ The win is speed to a true sentence. Sit someone in front of a wallet and, in ab
 
 ## Demo
 
-<!-- Add the walkthrough video here when ready.
-[Watch the walkthrough](docs/demo.mp4)
--->
+<a href="https://youtu.be/tQPDsLefSSg">
+  <img src="docs/images/video-preview.jpg" alt="Watch the demo" width="560">
+</a>
 
-**Walkthrough video coming soon.** Until then, the story is: one wallet, one window, named addresses, digestible fund flow.
+*YouTube walkthrough - [watch here](https://youtu.be/tQPDsLefSSg).*
 
 ## What’s on screen
 
