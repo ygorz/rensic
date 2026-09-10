@@ -1,0 +1,20 @@
+# Build caches
+node_modules/
+.awcache/
+.gradle/
+
+# Error logs
+npm-debug.log
+yarn-error.log
+
+# Outputs
+dist/
+build/
+
+# Generated files
+blob.js
+codegen/
+webpack.config.js
+webpack.dev.config.js
+.npmrc
+src/ontologyObjectFactory.ts

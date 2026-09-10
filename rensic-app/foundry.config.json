@@ -1,0 +1,12 @@
+{
+  "foundryUrl": "https://georgegorzhiyev.usw-17.palantirfoundry.com",
+  "site": {
+    "application": "ri.third-party-applications.main.application.cfd3e264-e3f6-4993-8abb-b38a1c5e6596",
+    "directory": "./dist",
+    "autoVersion": {
+      "type": "git-describe",
+      "tagPrefix": ""
+    },
+    "uploadOnly": false
+  }
+}

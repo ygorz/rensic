@@ -1,0 +1,76 @@
+---
+mappings:
+- alias: "/George Gorzhiyev-a8216a/Rensic/data-integration/clean/addresses"
+  modes:
+  - "BUILD"
+  - "READ"
+  path: "/deprecated-field"
+  rid: "ri.foundry.main.dataset.61dfb538-a319-4d19-b26f-b2b367aaeed5"
+- alias: "/George Gorzhiyev-a8216a/Rensic/data-integration/clean/case_addresses"
+  modes:
+  - "BUILD"
+  path: "/deprecated-field"
+  rid: "ri.foundry.main.dataset.b2fcc62d-e1ef-4d4f-a08d-3928543ef941"
+- alias: "/George Gorzhiyev-a8216a/Rensic/data-integration/clean/contract_interactions"
+  modes:
+  - "BUILD"
+  path: "/deprecated-field"
+  rid: "ri.foundry.main.dataset.10a65b16-8362-406e-a744-0cea5955b5ab"
+- alias: "/George Gorzhiyev-a8216a/Rensic/data-integration/clean/known_entities"
+  modes:
+  - "BUILD"
+  - "READ"
+  path: "/deprecated-field"
+  rid: "ri.foundry.main.dataset.b9cc9ec3-9bbb-4ebd-9c81-c1a36aaf9147"
+- alias: "/George Gorzhiyev-a8216a/Rensic/data-integration/clean/token_transfers"
+  modes:
+  - "BUILD"
+  path: "/deprecated-field"
+  rid: "ri.foundry.main.dataset.d76ab901-e0ce-40b2-bb1b-32605b9f9425"
+- alias: "/George Gorzhiyev-a8216a/Rensic/data-integration/clean/transactions"
+  modes:
+  - "BUILD"
+  path: "/deprecated-field"
+  rid: "ri.foundry.main.dataset.dc2227e2-8a9f-49a6-a7f5-4b0da525c396"
+- alias: "/George Gorzhiyev-a8216a/Rensic/data-integration/enriched/cross_chain_addresses"
+  modes:
+  - "BUILD"
+  path: "/deprecated-field"
+  rid: "ri.foundry.main.dataset.0ebcab48-15fb-4ee9-ab7c-26b362eff2dc"
+- alias: "/George Gorzhiyev-a8216a/Rensic/data-integration/raw/ingestion_log"
+  modes:
+  - "BUILD"
+  path: "/deprecated-field"
+  rid: "ri.foundry.main.dataset.06474b5b-10ff-4740-98f4-dd1fa6ca5380"
+- alias: "/George Gorzhiyev-a8216a/Rensic/data-integration/raw/ingestion_requests"
+  modes:
+  - "BUILD"
+  - "READ"
+  path: "/deprecated-field"
+  rid: "ri.foundry.main.dataset.534505ed-5024-4144-8daf-d2fe29ac1b19"
+- alias: "/George Gorzhiyev-a8216a/Rensic/data-integration/raw/raw_asset_transfers"
+  modes:
+  - "BUILD"
+  - "READ"
+  path: "/deprecated-field"
+  rid: "ri.foundry.main.dataset.846d46b1-97f8-4cef-802b-47225ecba33c"
+- alias: "/George Gorzhiyev-a8216a/Rensic/data-integration/sources/rpc_chain_config"
+  modes:
+  - "BUILD"
+  path: "/deprecated-field"
+  rid: "ri.foundry.main.dataset.1c83806e-8944-402c-a73e-4a77fe4a87bc"
+- alias: "ri.foundry.main.dataset.8c30e27c-723a-4471-8b58-c47cd48bf388"
+  modes:
+  - "READ"
+  path: "/deprecated-field"
+  rid: "ri.foundry.main.dataset.8c30e27c-723a-4471-8b58-c47cd48bf388"
+- alias: "ri.foundry.main.dataset.d4ffaad2-41f6-4c07-945e-f8706f5d4f10"
+  modes:
+  - "READ"
+  path: "/deprecated-field"
+  rid: "ri.foundry.main.dataset.d4ffaad2-41f6-4c07-945e-f8706f5d4f10"
+- alias: "ri.magritte..source.c55dc141-7169-45ca-8058-c1d727bcd013"
+  modes:
+  - "READ"
+  path: "/deprecated-field"
+  rid: "ri.magritte..source.c55dc141-7169-45ca-8058-c1d727bcd013"

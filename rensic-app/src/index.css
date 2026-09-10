@@ -1,0 +1,72 @@
+:root {
+  --ink: #111111;
+  --panel: #161616;
+  --panel-2: #1c1c1c;
+  --panel-copper: color-mix(in srgb, var(--panel) 97%, var(--copper-dim) 3%);
+  --line: #2a2a2a;
+  --text: #ececec;
+  --muted: #8a8a8a;
+  --copper: #b89a72;
+  --copper-dim: #6e5c42;
+  --ok: #6f9a82;
+  --warn: #c4ae7a;
+  --bad: #c07070;
+  --seed: #b89a72;
+  --disc: #7a7a7a;
+  --radius: 2px;
+  --intent-primary: var(--copper);
+  --intent-danger: var(--bad);
+  --intent-success: var(--ok);
+  --intent-none: var(--muted);
+  --font-ui: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-brand: "IBM Plex Serif", "Iowan Old Style", Palatino, Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --control-h: 24px;
+  --control-pad-x: 8px;
+  color-scheme: dark;
+  font-family: var(--font-ui);
+  color: var(--text);
+  background: var(--ink);
+  font-size: 13px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--ink);
+  color: var(--text);
+}
+#root {
+  margin: 0;
+  max-width: none;
+  padding: 0;
+}
+a {
+  color: var(--muted);
+}
+a:hover {
+  color: var(--copper);
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  color-scheme: dark;
+  border-radius: var(--radius);
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  outline: 1px solid #3a3a3a;
+  outline-offset: 1px;
+}

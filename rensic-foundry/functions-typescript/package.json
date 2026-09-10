@@ -1,0 +1,32 @@
+{
+  "name": "@my-functions/my-functions",
+  "version": "0.0.0",
+  "description": "My useful functions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "@foundry/functions-api": "0.121.0",
+    "@foundry/functions-typescript-runtime-internal-api": "0.125.0",
+    "@foundry/functions-utils": "0.15.0"
+  },
+  "devDependencies": {
+    "@foundry/functions-typescript-authoring-dev": "0.77.0",
+    "@foundry/functions-typescript-ontology-code-generator": "0.198.0",
+    "@foundry/functions-typescript-discovery": "0.261.0",
+    "@foundry/functions-typescript-object-set-base": "1.123.0",
+    "@foundry/functions-testing-lib": "0.224.0",
+    "@osdk/foundry.connectivity": "2.76.0",
+    "jest": "27.5.1",
+    "ts-jest": "27.1.5"
+  },
+  "optionalDependencies": {
+    "@foundry/functions-typescript-runtime-server-dev": "0.49.0"
+  },
+  "scripts": {
+    "build": "../gradlew build",
+    "check": "../gradlew check",
+    "test": "../gradlew test",
+    "jest": "jest"
+  },
+  "license": "UNLICENSED"
+}

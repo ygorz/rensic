@@ -1,0 +1,5 @@
+# Local Foundry npm auth. Copy to .npmrc and fill via Foundry / Developer Console.
+# Do not commit real tokens.
+# //YOUR_ENROLLMENT.palantirfoundry.com/artifacts/api/:_authToken=YOUR_TOKEN
+# registry=https://YOUR_ENROLLMENT.palantirfoundry.com/artifacts/api/repositories/.../contents/release/npm/
+omit-lockfile-registry-resolved=true

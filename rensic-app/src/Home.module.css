@@ -1,0 +1,356 @@
+.shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--ink);
+}
+.top {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.45rem 0.9rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+  position: relative;
+  z-index: 4;
+}
+.brand {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  font-size: 16px;
+  line-height: 1;
+  font-family: var(--font-brand);
+}
+.brand:hover {
+  color: var(--text);
+}
+.topGrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 1;
+}
+.caseSelect {
+  background: var(--ink);
+  border: 1px solid var(--line);
+  color: var(--text);
+  height: var(--control-h);
+  padding: 0 var(--control-pad-x);
+  min-width: 28rem;
+  border-radius: var(--radius);
+  font-size: 13px;
+  line-height: 1;
+  accent-color: #3a3a3a;
+}
+.caseSelect:focus,
+.caseSelect:focus-visible {
+  outline: 1px solid #3a3a3a;
+  outline-offset: 1px;
+  border-color: #3a3a3a;
+}
+.ghost {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  height: var(--control-h);
+  padding: 0 var(--control-pad-x);
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 13px;
+  border-radius: var(--radius);
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+.ghost:hover {
+  border-color: #3a3a3a;
+  color: var(--text);
+}
+.ghostOn,
+.ghostOn:hover {
+  color: var(--text);
+  background: var(--panel-2);
+  border-color: #3a3a3a;
+}
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+.menu {
+  position: relative;
+}
+@keyframes overlayEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.popover {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.55rem;
+  z-index: 30;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.7rem 0.8rem;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transform-origin: top right;
+  animation: overlayEnter 300ms cubic-bezier(0.54, 1.12, 0.38, 1.11);
+}
+.popover::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 1.15rem;
+  width: 9px;
+  height: 9px;
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  transform: rotate(45deg);
+}
+.popoverWide {
+  width: 22rem;
+}
+.popoverHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+.popoverHeadLead {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+}
+.popoverDot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--muted);
+  flex-shrink: 0;
+}
+.popoverClose {
+  position: relative;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  width: var(--control-h);
+  height: var(--control-h);
+  padding: 0;
+  border-radius: var(--radius);
+}
+.popoverClose::before,
+.popoverClose::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 1px;
+  background: currentColor;
+  border-radius: 1px;
+}
+.popoverClose::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.popoverClose::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.popoverClose:hover {
+  color: var(--text);
+}
+.popover input,
+.popover select {
+  background: var(--ink);
+  border: 1px solid var(--line);
+  color: var(--text);
+  height: var(--control-h);
+  padding: 0 var(--control-pad-x);
+  width: 100%;
+  border-radius: var(--radius);
+  font-size: 13px;
+  line-height: 1;
+  font-family: inherit;
+}
+.popover select {
+  appearance: none;
+  padding-right: 1.6rem;
+  background-image: linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position: calc(100% - 12px) 10px, calc(100% - 8px) 10px;
+  background-size: 4px 4px, 4px 4px;
+  background-repeat: no-repeat;
+}
+.popover input::placeholder {
+  font-size: 12px;
+  color: var(--muted);
+}
+.popover input:focus,
+.popover select:focus,
+.popover input:focus-visible,
+.popover select:focus-visible {
+  outline: 1px solid #3a3a3a;
+  outline-offset: 1px;
+  border-color: #3a3a3a;
+}
+.seedInput {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+}
+.fieldLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+.popoverNote,
+.popoverError {
+  font-size: 0.75rem;
+  overflow-wrap: anywhere;
+}
+.popoverNote {
+  color: var(--muted);
+}
+.popoverError {
+  color: var(--bad);
+}
+.body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.error {
+  color: var(--bad);
+  font-size: 0.78rem;
+  padding: 0.35rem 0.9rem;
+}
+.blank {
+  padding: 3.5rem 2.5rem;
+  color: var(--muted);
+  max-width: 38rem;
+}
+.blank h1 {
+  color: var(--text);
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0 0 0.35rem;
+}
+.kicker {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin: 0 0 0.35rem;
+}
+.foot {
+  border-top: 1px solid var(--line);
+  padding: 0.35rem 0.9rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  display: flex;
+  gap: 1.2rem;
+  letter-spacing: 0.01em;
+}
+
+.rpcHint {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+.rpcBlurb {
+  margin: 0 0 0.7rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+.rpcStatus {
+  font-style: italic;
+}
+.rpcBlurbEnd {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  white-space: nowrap;
+}
+.rpcMethod {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.rpcMethod:hover {
+  color: var(--text);
+}
+.rpcLink {
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  width: fit-content;
+}
+.rpcLink:hover {
+  color: var(--text);
+}
+
+.popoverSubmit {
+  align-self: center;
+  min-width: 8rem;
+  margin-top: 0.2rem;
+  height: var(--control-h);
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--text);
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 13px;
+  border-radius: var(--radius);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.popoverSubmit:hover:not(:disabled) {
+  border-color: #3a3a3a;
+  background: #222;
+}
+
+.popoverSubmit:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+.popoverSubmitLast {
+  align-self: stretch;
+  width: 100%;
+  margin-top: 0.35rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .popover {
+    animation: none;
+  }
+}

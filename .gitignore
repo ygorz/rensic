@@ -1,17 +1,29 @@
-rensic-app/
-rensic-foundry/
-rensic-ingestion/
 .DS_Store
 *.swp
 *~
 .idea/
 .vscode/
-.env
-.env.*
 Untitled/
+
+# Never commit secrets or local auth
+**/.npmrc
+**/.env
+**/.env.local
+**/*.pem
+**/*.p12
+**/id_rsa*
+
+# Build / deps / caches (in package snapshots)
+**/node_modules/
+**/dist/
+**/.pnpm-store/
 **/__pycache__/
 *.pyc
 .pytest_cache/
-node_modules/
-dist/
 *.tsbuildinfo
+**/.maestro/
+**/.vite/
+
+# Local package scratch not part of Foundry commits
+rensic-app/pnpm-lock.yaml
+rensic-app/pnpm-workspace.yaml

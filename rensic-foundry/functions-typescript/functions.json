@@ -1,0 +1,13 @@
+{
+  "useOntologyApiNames": true,
+  "enableModelFunctions": true,
+  "enableModelGraphFunctions": false,
+  "enableDiscoverImproperOntologyAccess": false,
+  "enableQueries": true,
+  "enableModelMetadata": false,
+  "useDeploymentApiNames": true,
+  "enableVectorProperties": true,
+  "enableMediaReferenceProperties": true,
+  "enableResourceGeneration": true,
+  "enableFullLinting": true
+}

@@ -1,0 +1,4 @@
+---
+title: Updated `package-lock.json` based on the `package.json` file.
+message: The `package-lock.json` file has been updated due to new or updated dependencies
+  in the `package.json` file in this repository.
