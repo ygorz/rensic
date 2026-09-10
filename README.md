@@ -37,7 +37,7 @@ The win is speed to a true sentence. Sit someone in front of a wallet and, in ab
 
 This is a **portfolio writeup**, not a clone-and-run OSS app. The live ontology, datasets, secrets, and hosted site live on a Foundry enrollment. The three code packages (`rensic-app`, `rensic-foundry`, `rensic-ingestion`) are browsable here as snapshots. They ship to production through Foundry Stemma remotes, not this GitHub remote.
 
-If you are reading this as a recruiter or hiring manager: the code is real and ran end to end. Reproducing it needs Foundry access, Alchemy keys, and the enrollment that holds the ontology.
+Reproducing the full stack needs Foundry access, Alchemy keys, and the enrollment that holds the ontology.
 
 ## Read next
 
