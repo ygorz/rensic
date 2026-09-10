@@ -1,5 +1,12 @@
 # Rensic
 
+[![Palantir Foundry](https://img.shields.io/badge/Palantir-Foundry-1B1F23)](https://www.palantir.com/platforms/foundry/)
+[![OSDK React](https://img.shields.io/badge/OSDK-React-61DAFB?logo=react&logoColor=black)](https://github.com/ygorz/rensic/tree/master/rensic-app)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Functions-3178C6?logo=typescript&logoColor=white)](https://github.com/ygorz/rensic/tree/master/rensic-foundry)
+[![Python Spark](https://img.shields.io/badge/Python-Spark-3776AB?logo=python&logoColor=white)](https://github.com/ygorz/rensic/tree/master/rensic-ingestion)
+[![Alchemy](https://img.shields.io/badge/Alchemy-getAssetTransfers-0C0C0E)](https://www.alchemy.com/)
+[![Ethereum](https://img.shields.io/badge/Ethereum-hop--1-3C3C3D?logo=ethereum&logoColor=white)](https://ethereum.org/)
+
 **Look at one crypto wallet over a stretch of time. See who it traded with, with names you can cite, instead of spelunking Etherscan.**
 
 Rensic is built on **Palantir Foundry**. Paste a wallet, pick a time window, pull hop-1 activity through Alchemy, and open a **file**: named addresses, fund flow, ledgers, and a short grounded summary.
