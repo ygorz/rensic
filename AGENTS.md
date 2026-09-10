@@ -8,7 +8,7 @@ On-chain **case file** on Palantir Foundry. Paste a wallet, pull a bounded hop-1
 
 North star: sit a stranger in front of a wallet; in about **30 seconds**, tell them something true they could not have seen on Etherscan as fast.
 
-If a change does not help that sentence, cut it or park it under "later" / "never" in `docs/scope.md`.
+If a change does not help that sentence, cut it or park it under "later" / "never" in `docs/architecture.md (and docs/archive/scope.md)`.
 
 ## Layout
 
@@ -89,7 +89,7 @@ Start at `docs/README.md`.
 | Doc | Use |
 |---|---|
 | `docs/why.md` | 30-second sentence / why anyone cares |
-| `docs/scope.md` | now / later / never fence |
+| `docs/architecture.md (and docs/archive/scope.md)` | now / later / never fence |
 | `docs/map.md` | three clones + how a change ships |
 | `docs/architecture.md` | data flow |
 | `docs/ontology.md` | objects, links, case vs address |
