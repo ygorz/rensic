@@ -8,6 +8,19 @@ The product question is small on purpose:
 
 Everything below exists to answer that without inventing risk scores or drowning in hop-2 noise.
 
+## Naming (file vs Investigation*)
+
+The UI noun is **file**. That is what people see in the chrome.
+
+Early ontology work used **Investigation** in type and action names (`InvestigationCase`, `InvestigationNarrative`, `openInvestigation`, `delete-investigation`, and similar). That was a naming miss. The product settled on quieter language, and renaming every Foundry type for a one-shot portfolio piece was not worth the blast radius.
+
+So in this guide:
+
+- **file** means what the person opens in the UI
+- **Investigation Case**, **Case Address**, **Investigation Narrative**, and the `*Investigation*` function / action ids mean the leftover ontology and API names
+
+Do not invent a second story where the product is an "investigation desk." It is a wallet file over a window.
+
 ## End to end
 
 ```mermaid
@@ -28,7 +41,7 @@ flowchart LR
 Happy path in words:
 
 1. You open a **file** (title, seed wallet, chain, lookback days).
-2. A function writes an **Investigation Case** and a hop-0 **Case Address** for the seed. Those are the ontology type names in Foundry.
+2. A function writes an **Investigation Case** and a hop-0 **Case Address** for the seed (ontology type names).
 3. The next pipeline build snapshots open files into **ingestion requests**.
 4. Spark calls Alchemy for transfers in that window (hop 1 only), joins the public pack where it can, and writes clean datasets.
 5. Those datasets back ontology objects the UI reads over OSDK.
@@ -57,11 +70,11 @@ Rensic is **classic Compass**, not a SuperRepo. There is no `ontology.mts` encod
 
 Palantir's useful rule here: model the world, and split **identity** from **observation**.
 
-| You say | Object type | Why |
+| You say | Object type (Foundry name) | Why |
 |---|---|---|
 | "this file" | Investigation Case | Seed, chains, window, status |
 | "this wallet on Ethereum" | Address | Global identity, key like `ethereum:0x...` |
-| "this wallet in my file as hop 1" | Case Address | Membership: hop, role, case-scoped ETH |
+| "this wallet in my file as hop 1" | Case Address | Membership: hop, role, ETH in this file |
 | "this native transfer" | Transaction | On-chain event |
 | "this USDC movement" | Token Transfer | Token event |
 | "the writeup" | Investigation Narrative | Saved summary body / sources |
@@ -73,14 +86,12 @@ Links are mostly object-backed through Case Address and file-scoped transfer obj
 
 ## UI surface
 
-The chrome noun is **file**.
-
 Tabs that matter for the demo:
 
 - **Fund flow**: ETH between the file wallet and each address it traded with
 - **Addresses**: working set: seed pinned, labeled rows first, then by flow (capped so a Vitalik-scale hop-1 dump is not the product)
 - **Transactions** / **Token transfers**: line-by-line ledgers for the file wallet in the window
-- **Summary**: short paragraphs from transfers and public names. Optional save onto the Investigation Narrative. Local grounded paraphrase is the reliable path.
+- **Summary**: short paragraphs from transfers and public names. Optional save onto the Investigation Narrative object. Local grounded paraphrase is the reliable path.
 
 Workshop is not the product. Object Explorer is for debug. A busy Vertex redraw of hop-1 was tried and dropped for the portfolio cut. Hop-2 was scoped out on purpose: hop-1 on a 30-day busy wallet is already enough blast radius.
 
@@ -113,12 +124,12 @@ Spark joins what it can onto addresses. The UI also reads pack metadata for cate
 
 ## Functions and actions
 
-Kinetic layer (how the world changes under governance):
+Kinetic layer (how the world changes under governance). Function and action ids still use the early Investigation* names:
 
-- Open / create a file
+- Open / create a file (`openInvestigation` and related actions)
 - Expand window or refresh ingest
 - Label / flag an address
-- Delete a file (cascade cleanup for file-scoped objects)
+- Delete a file (`deleteInvestigation` cascade for file-scoped objects)
 - Save narrative text when Summary is written to the file
 
 Pipelines compute. People decide. Functions back the actions the UI calls through OSDK.
@@ -152,6 +163,7 @@ Out of scope on purpose:
 - Invented behavioral risk scores
 - Hop-2 as a product tab
 - SuperRepo / `ontology.mts` migration just to look more official
+- Renaming every Investigation* ontology type to match the UI noun
 
 If a new idea does not help the 30-second true sentence, it is decoration.
 

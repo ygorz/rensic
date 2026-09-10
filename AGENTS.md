@@ -96,7 +96,7 @@ Start at `docs/README.md`.
 | `docs/entity-pack.md` + `docs/specs/entity-pack.spec.md` | dual-tier pack rules |
 | `docs/ingestion.md` + `docs/specs/ingestion.spec.md` | hop-1 Spark pipe |
 | `docs/functions-and-actions.md` + `docs/specs/functions.spec.md` | kinetic layer |
-| `docs/specs/desk.spec.md` | OSDK UI |
+| `docs/specs/ui.spec.md` | OSDK UI |
 | `docs/DEMO.md` | quiet-wallet click path |
 | `docs/status.md` | wired vs leftover |
 

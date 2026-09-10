@@ -1,7 +1,7 @@
 # Spec: entity pack
 
 Canonical CSV: rensic-ingestion/.../data/known_entities.csv
-Desk copy: rensic-app/src/knownEntities.json
+UI copy: rensic-app/src/knownEntities.json
 
 ## Columns
 
@@ -11,7 +11,7 @@ Optional: secondary_category
 ## Tiers
 
 - official: cited (PoR, OFAC, deployment docs). Flag cannot rename.
-- community: nametags with caveat. Investigator display may win.
+- community: nametags with caveat. A user-set display label may win.
 - Conflict: official wins; community row suppressed.
 
 ## Person first-party rule
