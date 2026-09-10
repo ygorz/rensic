@@ -1017,6 +1017,13 @@ th.num {
   min-width: 0;
 }
 .infoMark {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+  cursor: help;
   position: relative;
   display: inline-flex;
   align-items: center;

@@ -1492,11 +1492,6 @@ function CaseView(): React.ReactElement {
     try {
       const narrative = await runAipParaphrase(client, aipBrief);
       setAipNarrative(narrative);
-      // AIP Agent API may 404 on this enrollment even when Studio shows Published.
-      // Keep the grounded local summary in the UI; log AIP issues in the console only.
-      if ("aipWarning" in narrative && narrative.aipWarning) {
-        console.warn(narrative.aipWarning);
-      }
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Could not write summary.";
       setAipErr(msg);
@@ -1723,12 +1718,12 @@ function CaseView(): React.ReactElement {
         <div className={css.row}>
           <span className={css.rowLabel}>
             {nativeSymbol} moved
-            <span className={css.infoMark} tabIndex={0}>
+            <button type="button" className={css.infoMark} aria-label="About ETH moved">
               i
               <span className={css.infoCard} role="tooltip">
                 In plus out for this wallet, in this window. Not a net.
               </span>
-            </span>
+            </button>
           </span>
           <b className={css.num}>{fmtEth(railEth)}</b>
         </div>
@@ -1743,12 +1738,12 @@ function CaseView(): React.ReactElement {
         <div className={css.row}>
           <span className={css.rowLabel}>
             Sanctions / mixers
-            <span className={css.infoMark} tabIndex={0}>
+            <button type="button" className={css.infoMark} aria-label="About sanctions and mixers">
               i
               <span className={css.infoCard} role="tooltip">
                 Named from the public list. Not a risk score.
               </span>
-            </span>
+            </button>
           </span>
           <b className={css.num}>{fmtCount(railLabeledRisk)}</b>
         </div>
@@ -2107,9 +2102,10 @@ function CaseView(): React.ReactElement {
                                 </span>
                               ) : null}
                             </button>
-                            <span
+                            <button
+                              type="button"
                               className={`${css.infoMark} ${css.infoMarkHead}`}
-                              tabIndex={0}
+                              aria-label="About transactions count"
                               onClick={(e) => e.stopPropagation()}
                               onMouseDown={(e) => e.stopPropagation()}
                             >
@@ -2118,7 +2114,7 @@ function CaseView(): React.ReactElement {
                                 Unique transactions this address was in, in this
                                 window. Not only with the file wallet.
                               </span>
-                            </span>
+                            </button>
                           </span>
                         </th>
 

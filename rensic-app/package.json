@@ -25,7 +25,8 @@
     "normalize.css": "^8.0.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-router-dom": "^6.30.1"
+    "react-router-dom": "^6.30.1",
+    "@osdk/shared.client2": "1.0.0"
   },
   "devDependencies": {
     "@eslint/compat": "^1.3.2",

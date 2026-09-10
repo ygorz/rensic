@@ -63,7 +63,7 @@ function formatApiError(err: unknown): string {
       }
     }
     if (bits.length) {
-      return bits.join(" — ");
+      return bits.join(" - ");
     }
   }
   return err instanceof Error ? err.message : String(err);
@@ -173,11 +173,6 @@ export async function runAipParaphrase(
     return narrative;
   } catch (err) {
     const detail = formatApiError(err);
-    console.warn("AIP Agent unavailable; using local grounded summary", {
-      agentRid,
-      detail,
-      err,
-    });
     return {
       ...paraphraseBrief(brief),
       aipWarning: detail,
