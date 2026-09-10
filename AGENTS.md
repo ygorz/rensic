@@ -4,11 +4,11 @@ Solo portfolio project home. **Not** an open-source contribute flow. Read this b
 
 ## What Rensic is
 
-On-chain **case file** on Palantir Foundry. Paste a wallet, pull a bounded hop-1 window, see counterparties as ontology objects with **meaningful labels** — not fake risk scores.
+On-chain wallet file on Palantir Foundry. Paste a wallet, pull a bounded hop-1 window, see counterparties as ontology objects with **meaningful labels**, not fake risk scores.
 
 North star: sit a stranger in front of a wallet; in about **30 seconds**, tell them something true they could not have seen on Etherscan as fast.
 
-If a change does not help that sentence, cut it or park it under "later" / "never" in `docs/architecture.md (and docs/archive/scope.md)`.
+If a change does not help that sentence, cut it or park it under "later" / "never" in `docs/architecture.md`.
 
 ## Layout
 
@@ -17,7 +17,7 @@ rensic/
   README.md
   AGENTS.md
   docs/
-  rensic-app/          # OSDK React desk (own .git / stemma)
+  rensic-app/          # OSDK React UI (own .git / stemma)
   rensic-foundry/      # TS Functions v1 (own .git / stemma)
   rensic-ingestion/    # Python Spark transforms (own .git / stemma)
 ```
@@ -89,16 +89,15 @@ Start at `docs/README.md`.
 | Doc | Use |
 |---|---|
 | `docs/why.md` | 30-second sentence / why anyone cares |
-| `docs/architecture.md (and docs/archive/scope.md)` | now / later / never fence |
+| `docs/architecture.md` | now / later / never fence |
 | `docs/map.md` | three clones + how a change ships |
 | `docs/architecture.md` | data flow |
 | `docs/ontology.md` | objects, links, case vs address |
 | `docs/entity-pack.md` + `docs/specs/entity-pack.spec.md` | dual-tier pack rules |
 | `docs/ingestion.md` + `docs/specs/ingestion.spec.md` | hop-1 Spark pipe |
 | `docs/functions-and-actions.md` + `docs/specs/functions.spec.md` | kinetic layer |
-| `docs/desk.md` + `docs/specs/desk.spec.md` | OSDK UI |
+| `docs/specs/desk.spec.md` | OSDK UI |
 | `docs/DEMO.md` | quiet-wallet click path |
 | `docs/status.md` | wired vs leftover |
-| `docs/archive-notes.md` | retired RIDs / study-guide leftovers |
 
 Project path on this machine: `~/Documents/WilderformTools/rensic/`.

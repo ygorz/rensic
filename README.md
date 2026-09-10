@@ -2,19 +2,17 @@
 
 **Look at one crypto wallet over a stretch of time. See who it traded with, with names you can cite, instead of spelunking Etherscan.**
 
-Rensic is an on-chain investigation desk built on **Palantir Foundry**. Paste a wallet, pick a time window, pull hop-1 activity through Alchemy, and land in a case file: named addresses, fund flow, ledgers, and a short grounded summary.
+Rensic is built on **Palantir Foundry**. Paste a wallet, pick a time window, pull hop-1 activity through Alchemy, and open a **file**: named addresses, fund flow, ledgers, and a short grounded summary.
 
 The win is speed to a true sentence. Sit someone in front of a wallet and, in about 30 seconds, tell them something they could not have seen on Etherscan as fast. No invented risk scores.
 
 ## Demo
 
 <!-- Add the walkthrough video here when ready.
-<video> or markdown link / GitHub hosted mp4 / YouTube
-Example:
 [Watch the walkthrough](docs/demo.mp4)
 -->
 
-**Walkthrough video coming soon.** Until then, the story is: one wallet, one window, named counterparties, digestible fund flow.
+**Walkthrough video coming soon.** Until then, the story is: one wallet, one window, named addresses, digestible fund flow.
 
 ## What you get
 
@@ -24,16 +22,16 @@ Example:
 - **Summary**: a short read from transfers and public names, nothing invented
 - A **sourced entity pack** so hex becomes a name with a citation when we have one
 
-## Stack (keywords)
+## Stack
 
 | Layer | What |
 |---|---|
 | Platform | Palantir Foundry (classic Compass ontology, not a SuperRepo) |
-| Desk | OSDK React (Vite), hosted on Foundry |
-| Kinetic | TypeScript Functions v1 (create / expand / label / delete) |
+| UI | OSDK React (Vite), hosted on Foundry |
+| Functions | TypeScript Functions v1 (create / expand / label / delete) |
 | Ingest | Python Spark transforms, Alchemy `getAssetTransfers` |
-| Attribution | Dual-tier public pack (~5.5k rows: official + community) |
-| Domain | Hop-1 wallet investigation, multi-chain keys (`chain:0x...`) |
+| Names | Dual-tier public pack (~5.5k rows: official + community) |
+| Scope | Hop-1 activity for one wallet window, multi-chain keys (`chain:0x...`) |
 
 ## Honest about Foundry
 
@@ -43,8 +41,8 @@ If you are reading this as a recruiter or hiring manager: the code is real and r
 
 ## Read next
 
-- **[Architecture](docs/architecture.md)** - how Alchemy, Spark, ontology, functions, and the desk fit together
-- [docs/](docs/): short index, plus archived study notes if you want the long classroom trail
+- **[Architecture](docs/architecture.md)**: how Alchemy, Spark, ontology, functions, and the UI fit together
+- [docs/](docs/): short index and specs
 
 ## Layout of this repo
 
@@ -55,8 +53,7 @@ rensic/
   docs/
     architecture.md
     specs/
-    archive/          # older study-guide pages
-  rensic-app/         # OSDK React desk (snapshot)
+  rensic-app/         # OSDK React UI (snapshot)
   rensic-foundry/     # TypeScript Functions v1 (snapshot)
   rensic-ingestion/   # Python Spark transforms + entity pack (snapshot)
 ```
