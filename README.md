@@ -21,7 +21,7 @@ The win is speed to a true sentence. Sit someone in front of a wallet and, in ab
 
 **Walkthrough video coming soon.** Until then, the story is: one wallet, one window, named addresses, digestible fund flow.
 
-## What you get
+## What’s on screen
 
 - **Fund flow** between the file wallet and each address it touched
 - **Addresses** ranked for a working set (seed pinned, labeled first, then by ETH moved)
@@ -40,7 +40,7 @@ The win is speed to a true sentence. Sit someone in front of a wallet and, in ab
 | Names | Dual-tier public pack (~5.5k rows: official + community) |
 | Scope | Hop-1 activity for one wallet window, multi-chain keys (`chain:0x...`) |
 
-## Honest about Foundry
+## About this repo
 
 This is a **portfolio writeup**, not a clone-and-run OSS app. The live ontology, datasets, secrets, and hosted site live on a Foundry enrollment. The three code packages (`rensic-app`, `rensic-foundry`, `rensic-ingestion`) are browsable here as snapshots. They ship to production through Foundry Stemma remotes, not this GitHub remote.
 
@@ -67,7 +67,7 @@ rensic/
 
 The folders above are **read-only snapshots** of the Foundry Stemma checkouts so you can browse the code. Real ship remotes stay on Foundry. Local auth files (`.npmrc` with registry tokens) are not included.
 
-## What we refuse
+## Out of scope
 
 - Fake 0-100 risk scores
 - Hop-2 product surface for a busy wallet demo
